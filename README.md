@@ -43,6 +43,20 @@ With everything configured you need to run:
   yarn start
 ```
 
+## Built With
+
+- [React](https://pt-br.reactjs.org/) - The web framework used
+- [Redux](https://redux.js.org/) - State Management
+- [Material-UI](https://material-ui.com/) - Use to create the UI/UX
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://github.com/amauribechtoldjr/transactions-manager-client/blob/master/CONTRIBUTING.md) for details of our process for submitting pull requests to us.
+
+## Authors
+
+- **Amauri Bechtold Junior** - _Initial work_ - [Amauri Bechtold Junior](https://github.com/amauribechtoldjr/)
+
 ## Screenshots
 
 ![alt text](https://github.com/amauribechtoldjr/transactions-manager-client/blob/master/app-screens/signin.jpg)
