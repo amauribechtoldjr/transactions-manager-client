@@ -3,8 +3,11 @@ import axios from 'axios';
 import store from '../store/store';
 import { CombinedReducersState } from '../store/reducers';
 
+const BASEURL_API = process.env.REACT_APP_BASEURL_API;
+console.log(process.env.REACT_APP_BASEURL_API);
+
 const api = axios.create({
-  baseURL: 'http://localhost:3000',
+  baseURL: BASEURL_API,
 });
 
 api.interceptors.request.use(function(config) {
