@@ -11,7 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 We advise you to use yarn instead of npm, or, you will need to change our scripts.
 Here are the instructions in case you do not have it installed:
 
-https://yarnpkg.com/lang/pt-br/docs/install/#windows-stable
+`https://yarnpkg.com/lang/pt-br/docs/install/#windows-stable`
 
 To check if it successfull installed, run this command:
 
@@ -32,6 +32,10 @@ First we need to install our dependencies:
 Then you need to create an .env file to set the environment variables, i have had put an example to follow in `.env.example`.
 
 ### How to run
+
+We need to configure the back-end too, here is the repositorie with instructions to setup it:
+
+`https://github.com/amauribechtoldjr/transactions-manager-server`
 
 With everything configured you need to run:
 
