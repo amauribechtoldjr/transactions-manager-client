@@ -47,7 +47,7 @@ With everything configured you need to run:
 
 - [React](https://pt-br.reactjs.org/) - The web framework used
 - [Redux](https://redux.js.org/) - State Management
-- [Material-UI](https://material-ui.com/) - Use to create the UI/UX
+- [Material-UI](https://material-ui.com/) - Used to create the UI/UX
 
 ## Contributing
 
@@ -57,6 +57,15 @@ Please read [CONTRIBUTING.md](https://github.com/amauribechtoldjr/transactions-m
 
 - **Amauri Bechtold Junior** - _Initial work_ - [Amauri Bechtold Junior](https://github.com/amauribechtoldjr/)
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/amauribechtoldjr/transactions-manager-client/blob/master/LICENSE) file for details.
+
+## FAQ
+
+Please, send me any question that you have about the project.  
+E-mail: amauribechtoldjr@gmail.com
+
 ## Screenshots
 
 ![alt text](https://github.com/amauribechtoldjr/transactions-manager-client/blob/master/app-screens/signin.jpg)
@@ -64,8 +73,3 @@ Please read [CONTRIBUTING.md](https://github.com/amauribechtoldjr/transactions-m
 
 ![alt text](https://github.com/amauribechtoldjr/transactions-manager-client/blob/master/app-screens/transactions.jpg)
 ![alt text](https://github.com/amauribechtoldjr/transactions-manager-client/blob/master/app-screens/add-transaction.jpg)
-
-## FAQ
-
-Please, send me any question that you have about the project.
-E-mail: amauribechtoldjr@gmail.com
