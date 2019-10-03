@@ -11,7 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 We advise you to use yarn instead of npm, or, you will need to change our scripts.
 Here are the instructions in case you do not have it installed:
 
-`https://yarnpkg.com/lang/pt-br/docs/install/#windows-stable`
+`https://yarnpkg.com/lang/pt-br/docs/install/`
 
 To check if it successfull installed, run this command:
 
