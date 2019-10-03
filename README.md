@@ -1,4 +1,4 @@
-### transactions-manager
+# Transactions Manager
 
 An web app in React to track credit card transactions.
 
