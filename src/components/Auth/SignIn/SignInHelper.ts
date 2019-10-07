@@ -9,12 +9,12 @@ export const getFieldsSignIn: () => IFormField[] = () => {
         {
           type: EValidationTypes.FILLED,
           execIsValid: value => value !== '',
-          errorMessage: 'E-mail não preenchido.',
+          errorMessage: 'emailNotFilled',
         },
         {
           type: EValidationTypes.VALID,
           execIsValid: value => /\S+@\S+\.\S+/.test(value),
-          errorMessage: 'Formato inválido.',
+          errorMessage: 'emailInvalid',
         },
       ],
     },
@@ -25,7 +25,7 @@ export const getFieldsSignIn: () => IFormField[] = () => {
         {
           type: EValidationTypes.FILLED,
           execIsValid: value => value !== '',
-          errorMessage: 'Senha não preenchida.',
+          errorMessage: 'passwordNotFilled',
         },
       ],
     },

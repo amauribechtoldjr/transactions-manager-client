@@ -50,7 +50,7 @@ const SignIn: React.FC<any> = () => {
             required
             fullWidth
             error={getFieldError('email', fields) !== ''}
-            helperText={getFieldError('email', fields)}
+            helperText={t(getFieldError('email', fields))}
             label={t('email')}
             value={getFieldValue('email', fields)}
             onChange={event =>
@@ -65,7 +65,7 @@ const SignIn: React.FC<any> = () => {
             fullWidth
             label={t('password')}
             error={getFieldError('password', fields) !== ''}
-            helperText={getFieldError('password', fields)}
+            helperText={t(getFieldError('password', fields))}
             type="password"
             autoComplete="current-password"
             value={getFieldValue('password', fields)}

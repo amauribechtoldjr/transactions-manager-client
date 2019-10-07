@@ -57,7 +57,7 @@ const initializeFields = (fields: IFormField[]): IFormField[] => {
         validation.type === EValidationTypes.FILLED &&
         !validation.errorMessage
       ) {
-        validation.errorMessage = 'Campo obrigatório.';
+        validation.errorMessage = 'defaultFieldNotFilledMessage';
       }
       validation.success = true;
       return validation;

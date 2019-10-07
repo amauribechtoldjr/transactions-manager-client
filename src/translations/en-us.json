@@ -2,8 +2,14 @@
   "translation": {
     "currency": "$",
 
+    "defaultFieldNotFilledMessage": "Required field.",
+
     "email": "Email",
+    "emailNotFilled": "Email is required.",
+    "emailInvalid": "Invalid email.",
+
     "password": "Password",
+    "passwordNotFilled": "Password is required.",
 
     "signup": "Sign Up",
     "signUpButton": "Sign Up",
@@ -23,6 +29,7 @@
 
     "newTransaction": "New Transaction",
     "totalLabel": "Total:",
+    "invalidValue": "Invalid value.",
 
     "transactionDateHeader": "Release Date",
     "descriptionHeader": "Description",

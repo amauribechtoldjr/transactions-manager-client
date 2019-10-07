@@ -59,7 +59,7 @@ const SignUp: React.FC<any> = ({ ...props }) => {
             label={t('firstName')}
             autoFocus
             error={getFieldError(FIRSTNAME, fields) !== ''}
-            helperText={getFieldError(FIRSTNAME, fields)}
+            helperText={t(getFieldError(FIRSTNAME, fields))}
             value={getFieldValue(FIRSTNAME, fields)}
             onChange={event =>
               setFields(
@@ -76,7 +76,7 @@ const SignUp: React.FC<any> = ({ ...props }) => {
             label={t('lastName')}
             autoComplete="lname"
             error={getFieldError(LASTNAME, fields) !== ''}
-            helperText={getFieldError(LASTNAME, fields)}
+            helperText={t(getFieldError(LASTNAME, fields))}
             value={getFieldValue(LASTNAME, fields)}
             onChange={event =>
               setFields(handleFieldChange(event.target.value, LASTNAME, fields))
@@ -90,7 +90,7 @@ const SignUp: React.FC<any> = ({ ...props }) => {
             fullWidth
             label={t('email')}
             error={getFieldError(EMAIL, fields) !== ''}
-            helperText={getFieldError(EMAIL, fields)}
+            helperText={t(getFieldError(EMAIL, fields))}
             value={getFieldValue(EMAIL, fields)}
             onChange={event =>
               setFields(handleFieldChange(event.target.value, EMAIL, fields))
@@ -106,7 +106,7 @@ const SignUp: React.FC<any> = ({ ...props }) => {
             type="password"
             autoComplete="current-password"
             error={getFieldError(PASSWORD, fields) !== ''}
-            helperText={getFieldError(PASSWORD, fields)}
+            helperText={t(getFieldError(PASSWORD, fields))}
             value={getFieldValue(PASSWORD, fields)}
             onChange={event =>
               setFields(handleFieldChange(event.target.value, PASSWORD, fields))

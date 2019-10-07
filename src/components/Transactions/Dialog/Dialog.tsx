@@ -107,7 +107,7 @@ const TransactionDialog: React.FC = () => {
                 label="Descrição"
                 autoFocus
                 error={getFieldError(DESCRIPTION, fields) !== ''}
-                helperText={getFieldError(DESCRIPTION, fields)}
+                helperText={t(getFieldError(DESCRIPTION, fields))}
                 value={getFieldValue(DESCRIPTION, fields)}
                 onChange={event =>
                   setFields(
@@ -127,7 +127,7 @@ const TransactionDialog: React.FC = () => {
                 fullWidth
                 autoComplete="lname"
                 error={getFieldError(VALUE, fields) !== ''}
-                helperText={getFieldError(VALUE, fields)}
+                helperText={t(getFieldError(VALUE, fields))}
                 value={getFieldValue(VALUE, fields)}
                 onChange={event => {
                   setFields(
@@ -160,7 +160,7 @@ const TransactionDialog: React.FC = () => {
               </Select>
               {getFieldError(TYPE, fields) !== '' && (
                 <FormHelperText style={{ color: 'red', marginLeft: '10px' }}>
-                  {getFieldError(TYPE, fields)}
+                  {t(getFieldError(TYPE, fields))}
                 </FormHelperText>
               )}
             </Grid>

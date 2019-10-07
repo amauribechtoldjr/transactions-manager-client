@@ -4,7 +4,6 @@ import store from '../store/store';
 import { CombinedReducersState } from '../store/reducers';
 
 const BASEURL_API = process.env.REACT_APP_BASEURL_API;
-console.log(process.env.REACT_APP_BASEURL_API);
 
 const api = axios.create({
   baseURL: BASEURL_API,

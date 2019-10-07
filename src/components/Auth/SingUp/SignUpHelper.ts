@@ -38,7 +38,7 @@ export const getFieldsSignUp: () => IFormField[] = () => {
         {
           type: EValidationTypes.VALID,
           execIsValid: value => /\S+@\S+\.\S+/.test(value),
-          errorMessage: 'E-mail inválido.',
+          errorMessage: 'emailInvalid',
         },
       ],
     },

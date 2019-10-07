@@ -28,7 +28,7 @@ export const getTransactionFields: () => IFormField[] = () => {
           type: EValidationTypes.VALID,
           execIsValid: value =>
             /^[+-]?\d+(\.\d+)?$/.test(value.replace(/,/g, '')),
-          errorMessage: 'Valor inválido.',
+          errorMessage: 'invalidValue',
         },
       ],
     },

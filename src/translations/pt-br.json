@@ -2,8 +2,14 @@
   "translation": {
     "currency": "R$",
 
+    "defaultFieldNotFilledMessage": "Campo obrigatório.",
+
     "email": "Email",
+    "emailNotFilled": "Email não preenchido.",
+    "emailInvalid": "Email inválido.",
+
     "password": "Senha",
+    "passwordNotFilled": "Senha não preenchida.",
 
     "signup": "Registrar",
     "signUpButton": "Registrar",
@@ -23,6 +29,7 @@
 
     "newTransaction": "Nova Transação",
     "totalLabel": "Total:",
+    "invalidValue": "Valor inválido.",
 
     "transactionDateHeader": "Data do lançamento",
     "descriptionHeader": "Descrição",
