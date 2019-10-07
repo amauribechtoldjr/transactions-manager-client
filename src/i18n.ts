@@ -4,14 +4,16 @@ import { initReactI18next } from 'react-i18next';
 import pt_br from './translations/pt-br.json';
 import en_us from './translations/en-us.json';
 
-const resources = {
+let resources = {};
+
+resources = {
   pt_br,
   en_us,
 };
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: 'en_us',
+  lng: 'pt_br',
 
   keySeparator: false,
 
