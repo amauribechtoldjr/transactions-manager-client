@@ -5,11 +5,13 @@ import { AppBar, Toolbar, Link, Button } from '@material-ui/core';
 import { useDispatch } from 'react-redux';
 import { logout } from '../../../store/auth/actions';
 import ConfirmDialog from '../ConfirmDialog/ConfirmDialog';
+import { useTranslation } from 'react-i18next';
 
 const AppBarComponent: React.FC = () => {
   const [confirmDialogOpen, setConfirmDialogOpen] = React.useState(false);
   const dispatch = useDispatch();
   const classes = useAppBarStyles();
+  const { t } = useTranslation();
 
   const doLogout = () => {
     dispatch(logout());
@@ -26,7 +28,7 @@ const AppBarComponent: React.FC = () => {
   return (
     <div>
       <ConfirmDialog
-        confirmMessage={'Tem certeza que deseja sair?'}
+        confirmMessage={t('logouConfirmMessage')}
         open={confirmDialogOpen}
         onCancel={_handleClose}
         onConfirm={doLogout}
@@ -44,7 +46,7 @@ const AppBarComponent: React.FC = () => {
           </Link>
           <div className={classes.right}>
             <Button color="inherit" onClick={_handleOpen}>
-              {'Logout'}
+              {t('logoutButton')}
             </Button>
           </div>
         </Toolbar>

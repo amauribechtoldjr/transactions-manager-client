@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as st from './ConfirmDialogStyled';
 import { Dialog, DialogActions, Button } from '@material-ui/core';
+import { useTranslation } from 'react-i18next';
 
 interface ConfirmDialogProps {
   onConfirm: () => void;
@@ -13,24 +14,35 @@ interface ConfirmDialogProps {
 }
 
 const ConfirmDialog: React.FC<ConfirmDialogProps> = props => {
+  const { t } = useTranslation();
+
+  let title = props.title;
+  if (!title) title = t('confirmDialogTitleDefault');
+
+  let cancelText = props.cancelText;
+  if (!cancelText) cancelText = t('confirmDialogCancelText');
+
+  let confirmText = props.confirmText;
+  if (!confirmText) confirmText = t('confirmDialogConfirmText');
+
   return (
     <Dialog open={props.open} onClose={props.onCancel}>
-      <st.TitleStyled>{props.title}</st.TitleStyled>
+      <st.TitleStyled>{title}</st.TitleStyled>
       <st.DialogContentStyled>{props.confirmMessage}</st.DialogContentStyled>
       <DialogActions>
         <st.CancelButtonStyled onClick={props.onCancel}>
-          {props.cancelText}
+          {cancelText}
         </st.CancelButtonStyled>
-        <Button onClick={props.onConfirm}>{props.confirmText}</Button>
+        <Button onClick={props.onConfirm}>{confirmText}</Button>
       </DialogActions>
     </Dialog>
   );
 };
 
 ConfirmDialog.defaultProps = {
-  title: 'Confirmação',
-  cancelText: 'Não',
-  confirmText: 'Sim',
+  title: '',
+  cancelText: '',
+  confirmText: '',
 };
 
 export default ConfirmDialog;

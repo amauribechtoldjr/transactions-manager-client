@@ -30,6 +30,7 @@ import { addTransaction } from '../../../store/transactions/actions';
 import { ETransactionType } from '../../../store/transactions/types';
 import NumberFormatInput from '../../UI/NumberFormatInput/NumberFormatInput';
 import useDialogStyles from './DialogStyled';
+import { useTranslation } from 'react-i18next';
 
 const TransactionDialog: React.FC = () => {
   const [isDialogOpen, setDialogOpen] = React.useState<boolean>(false);
@@ -41,6 +42,7 @@ const TransactionDialog: React.FC = () => {
   );
   const dispatch = useDispatch();
   const classes = useDialogStyles();
+  const { t } = useTranslation();
 
   const _handleClose = () => {
     setFields(clearFields(fields));
@@ -86,7 +88,7 @@ const TransactionDialog: React.FC = () => {
   return (
     <React.Fragment>
       <Button variant="contained" onClick={_handleOpen}>
-        Nova transação
+        {t('newTransaction')}
       </Button>
       <Dialog
         open={isDialogOpen}

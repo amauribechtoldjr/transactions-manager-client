@@ -21,10 +21,11 @@ import {
   ValidateFormResult,
   validateForm,
 } from '../../../helpers/forms';
+import { useTranslation } from 'react-i18next';
 
 const SignUp: React.FC<any> = ({ ...props }) => {
   const [fields, setFields] = React.useState<IFormField[]>(getFieldsSignUp());
-
+  const { t } = useTranslation();
   const classes = useStyles();
   const dispatch = useDispatch();
 
@@ -55,7 +56,7 @@ const SignUp: React.FC<any> = ({ ...props }) => {
             variant="outlined"
             required
             fullWidth
-            label="Nome"
+            label={t('firstName')}
             autoFocus
             error={getFieldError(FIRSTNAME, fields) !== ''}
             helperText={getFieldError(FIRSTNAME, fields)}
@@ -72,7 +73,7 @@ const SignUp: React.FC<any> = ({ ...props }) => {
             variant="outlined"
             required
             fullWidth
-            label="Sobrenome"
+            label={t('lastName')}
             autoComplete="lname"
             error={getFieldError(LASTNAME, fields) !== ''}
             helperText={getFieldError(LASTNAME, fields)}
@@ -87,7 +88,7 @@ const SignUp: React.FC<any> = ({ ...props }) => {
             variant="outlined"
             required
             fullWidth
-            label="Email"
+            label={t('email')}
             error={getFieldError(EMAIL, fields) !== ''}
             helperText={getFieldError(EMAIL, fields)}
             value={getFieldValue(EMAIL, fields)}
@@ -101,7 +102,7 @@ const SignUp: React.FC<any> = ({ ...props }) => {
             variant="outlined"
             required
             fullWidth
-            label="Senha"
+            label={t('password')}
             type="password"
             autoComplete="current-password"
             error={getFieldError(PASSWORD, fields) !== ''}
@@ -121,7 +122,7 @@ const SignUp: React.FC<any> = ({ ...props }) => {
         className={classes.submit}
         onClick={_handleAuthClick}
       >
-        Registrar
+        {t('signUpButton')}
       </Button>
     </form>
   );

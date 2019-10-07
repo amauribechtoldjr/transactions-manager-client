@@ -15,10 +15,11 @@ import {
 } from '../../../helpers/forms';
 import { authUser } from '../../../store/auth/actions';
 import { getFieldsSignIn } from './SignInHelper';
+import { useTranslation } from 'react-i18next';
 
 const SignIn: React.FC<any> = () => {
   const [fields, setFields] = React.useState<IFormField[]>(getFieldsSignIn());
-
+  const { t } = useTranslation();
   const classes = useStyles();
   const dispatch = useDispatch();
 
@@ -50,7 +51,7 @@ const SignIn: React.FC<any> = () => {
             fullWidth
             error={getFieldError('email', fields) !== ''}
             helperText={getFieldError('email', fields)}
-            label="Email"
+            label={t('email')}
             value={getFieldValue('email', fields)}
             onChange={event =>
               setFields(handleFieldChange(event.target.value, 'email', fields))
@@ -62,7 +63,7 @@ const SignIn: React.FC<any> = () => {
             variant="outlined"
             required
             fullWidth
-            label="Senha"
+            label={t('password')}
             error={getFieldError('password', fields) !== ''}
             helperText={getFieldError('password', fields)}
             type="password"
@@ -84,7 +85,7 @@ const SignIn: React.FC<any> = () => {
         className={classes.submit}
         onClick={_handleAuthClick}
       >
-        Conectar
+        {t('singinButton')}
       </Button>
     </form>
   );

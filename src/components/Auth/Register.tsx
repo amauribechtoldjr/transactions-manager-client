@@ -3,6 +3,8 @@ import * as React from 'react';
 import SignIn from './SignIn/SignIn';
 import SignUp from './SingUp/SignUp';
 
+import { useTranslation } from 'react-i18next';
+
 import { Container, Grid, Button } from '@material-ui/core';
 
 import { CombinedReducersState } from '../../store/reducers';
@@ -23,6 +25,7 @@ const Register: React.FC = ({ ...props }) => {
   );
   const dispatch = useDispatch();
   const classes = useStyles();
+  const { t } = useTranslation();
 
   React.useEffect(() => {
     dispatch(clearErrors());
@@ -37,7 +40,7 @@ const Register: React.FC = ({ ...props }) => {
               className={getButtonStyle(!isSignIn, classes)}
               onClick={() => setSignIn(false)}
             >
-              Registrar
+              {t('signup')}
             </Button>
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -46,7 +49,7 @@ const Register: React.FC = ({ ...props }) => {
               className={getButtonStyle(isSignIn, classes)}
               onClick={() => setSignIn(true)}
             >
-              Conectar
+              {t('signin')}
             </Button>
           </Grid>
           {error.message && (

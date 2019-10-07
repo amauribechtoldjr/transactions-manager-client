@@ -16,6 +16,7 @@ import { stableSort, getSorting } from '../../../helpers/gridLists';
 import EnhancedTableHead from './TableHeader/TableHeader';
 import { formatDate } from '../../../helpers/date';
 import { numberWithCommas } from '../../../helpers/numbers';
+import { useTranslation } from 'react-i18next';
 
 interface EnchancedTableProps {
   data: ITransaction[];
@@ -27,6 +28,7 @@ const EnhancedTable: React.FC<EnchancedTableProps> = props => {
   const [orderBy, setOrderBy] = React.useState('createdAt');
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
+  const { t } = useTranslation();
 
   const handleRequestSort = (event: any, property: any) => {
     const isDesc = orderBy === property && order === 'desc';
@@ -103,6 +105,10 @@ const EnhancedTable: React.FC<EnchancedTableProps> = props => {
           count={props.data.length}
           rowsPerPage={rowsPerPage}
           page={page}
+          labelRowsPerPage={t('rowsPerPageTransactionsGridLabel')}
+          labelDisplayedRows={({ from, to, count }) =>
+            `${from}-${to} ${t('rowsPerPageSeparator')} ${count}`
+          }
           onChangePage={handleChangePage}
           onChangeRowsPerPage={handleChangeRowsPerPage}
         />

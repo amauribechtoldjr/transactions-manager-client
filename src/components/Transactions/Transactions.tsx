@@ -15,6 +15,7 @@ import GridList from './GridList/GridList';
 import AppBar from '../UI/AppBar/AppBar';
 import Dialog from './Dialog/Dialog';
 import { numberWithCommas } from '../../helpers/numbers';
+import { useTranslation } from 'react-i18next';
 
 const Transactions: React.FC = () => {
   const transactions: TransactionsState = useSelector(
@@ -24,6 +25,7 @@ const Transactions: React.FC = () => {
     state => (state as CombinedReducersState).auth
   );
   const dispatch = useDispatch();
+  const { t } = useTranslation();
 
   React.useEffect(() => {
     dispatch(getTransactions((auth.user as IUser)._id));
@@ -54,7 +56,7 @@ const Transactions: React.FC = () => {
             </Grid>
             <Grid item xs={6} sm={3}>
               <Typography variant="h5">
-                {`Total: R$ ${numberWithCommas(
+                {`${t('totalLabel')} ${t('currency')} ${numberWithCommas(
                   getTotalValue(transactions.transactions)
                 )}`}
               </Typography>

@@ -7,27 +7,28 @@ import {
   TableSortLabel,
 } from '@material-ui/core';
 import { useTableHeadStyled } from './TableHeaderStyles';
+import { useTranslation } from 'react-i18next';
 
 const headCells = [
   {
     id: 'createdAt',
     numeric: false,
-    label: 'Data de lançamento',
+    label: 'transactionDateHeader',
     width: '15%',
   },
   {
     id: 'description',
     numeric: false,
-    label: 'Descrição',
+    label: 'descriptionHeader',
     width: '50%',
   },
   {
     id: 'type',
     numeric: false,
-    label: 'Tipo de transação',
+    label: 'transactionTypeHeader',
     width: '10%',
   },
-  { id: 'value', numeric: true, label: 'Valor', width: '25%' },
+  { id: 'value', numeric: true, label: 'transactionValueHeader', width: '25%' },
 ];
 
 interface EnchancedTableHeadProps {
@@ -40,6 +41,7 @@ interface EnchancedTableHeadProps {
 const EnhancedTableHead: React.FC<EnchancedTableHeadProps> = props => {
   const { order, orderBy, onRequestSort } = props;
   const classes = useTableHeadStyled();
+  const { t } = useTranslation();
 
   const createSortHandler = (property: any) => (event: any) => {
     onRequestSort(event, property);
@@ -60,7 +62,7 @@ const EnhancedTableHead: React.FC<EnchancedTableHeadProps> = props => {
               direction={order}
               onClick={createSortHandler(headCell.id)}
             >
-              {headCell.label}
+              {t(headCell.label)}
               {orderBy === headCell.id ? (
                 <span className={classes.visuallyHidden}>
                   {order === 'desc' ? 'sorted descending' : 'sorted ascending'}

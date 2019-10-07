@@ -1,0 +1,35 @@
+{
+  "translation": {
+    "currency": "$",
+
+    "email": "Email",
+    "password": "Password",
+
+    "signup": "Sign Up",
+    "signUpButton": "Sign Up",
+    "name": "First Name",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+
+    "signin": "Sing In",
+    "singinButton": "Sign In",
+
+    "logoutButton": "Logout",
+    "logouConfirmMessage": "Are you sure you want to logout?",
+
+    "confirmDialogTitleDefault": "Confirm",
+    "confirmDialogCancelText": "No",
+    "confirmDialogConfirmText": "Yes",
+
+    "newTransaction": "New Transaction",
+    "totalLabel": "Total:",
+
+    "transactionDateHeader": "Release Date",
+    "descriptionHeader": "Description",
+    "transactionTypeHeader": "Transaction Type",
+    "transactionValueHeader": "Value",
+
+    "rowsPerPageTransactionsGridLabel": "Rows per page",
+    "rowsPerPageSeparator": "of"
+  }
+}
